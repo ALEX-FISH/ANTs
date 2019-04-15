@@ -763,6 +763,7 @@ RegistrationHelper<TComputeType, VImageDimension>
     {
     so = ImageMaskSpatialObjectType::New();
     so->SetImage( fixedImageMask.GetPointer() );
+    so->Update();
     }
   this->AddFixedImageMask( so );
 }
@@ -778,6 +779,7 @@ RegistrationHelper<TComputeType, VImageDimension>
     {
     so = ImageMaskSpatialObjectType::New();
     so->SetImage( movingImageMask.GetPointer() );
+    so->Update();
     }
   this->AddMovingImageMask( so );
 }
